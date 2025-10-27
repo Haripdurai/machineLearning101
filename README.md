@@ -56,6 +56,55 @@ This project implements a basic linear regression model to analyze the relations
    ```
    This will create `plot.png` showing the actual data points and regression line.
 
+   ## DVC pipeline
+
+   This repository uses DVC to define and run a small pipeline. You can reproduce the entire pipeline or run individual stages.
+
+   Reproduce all stages (run in project root):
+
+   ```powershell
+   # Reproduce every stage in the pipeline (train -> plot)
+   dvc repro
+   ```
+
+   Run a single stage:
+
+   ```powershell
+   # Run only the training stage
+   dvc repro train
+
+   # Run only the plotting stage
+   dvc repro plot
+   ```
+
+   Useful DVC commands:
+
+   ```powershell
+   # Show pipeline graph
+   dvc dag
+
+   # Push tracked outputs to remote storage (if configured)
+   dvc push
+
+   # After reproducing, add dvc.lock and .gitignore and commit
+   git add .gitignore dvc.lock
+   git commit -m "Reproduced pipeline and saved outputs"
+   ```
+
+   ### Pipeline stages (summary)
+
+   - train
+      - command: `python TrainModel.py`
+      - purpose: train a LinearRegression model on `Retail_sales.csv` and save the trained artifact
+      - inputs: `Retail_sales.csv`, `TrainModel.py`
+      - outputs: `trained_model.pkl`
+
+   - plot
+      - command: `python PlotModel.py`
+      - purpose: load the trained model and produce a visualization (`plot.png`)
+      - inputs: `PlotModel.py`, `trained_model.pkl`
+      - outputs: `plot.png`
+
 ## Data
 
 The project uses retail sales data with two main columns:
@@ -80,3 +129,4 @@ The data is tracked using DVC (Data Version Control) for better version manageme
     - First stage is to train the model
         - The output of the first stage is the pkl file, which is input to stage 2 to plot
     - Second stage is to plot
+- dvc.lock file
