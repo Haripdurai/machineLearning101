@@ -76,3 +76,7 @@ The data is tracked using DVC (Data Version Control) for better version manageme
 - The trained model is saved with both the model object and the training data for reproducibility
 - Data files are version controlled using DVC
 - Exploratory data analysis results are stored in the `eda_outputs` directory
+- This project contain two simple stages.This is stored in dvc.yaml
+    - First stage is to train the model
+        - The output of the first stage is the pkl file, which is input to stage 2 to plot
+    - Second stage is to plot

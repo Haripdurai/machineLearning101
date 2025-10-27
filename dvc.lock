@@ -1,0 +1,34 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python .\TrainModel.py
+    deps:
+    - path: .\Retail_sales.csv
+      hash: md5
+      md5: f8c58c4e5816c3a31962b2bbc3a98c5f
+      size: 2477219
+    - path: .\TrainModel.py
+      hash: md5
+      md5: 20c4f168af6942d6428df1841398c47a
+      size: 2069
+    outs:
+    - path: .\trained_model.pkl
+      hash: md5
+      md5: 183472708bfd0ecc30b1161d9151f7bd
+      size: 480558
+  plot:
+    cmd: python .\PlotModel.py
+    deps:
+    - path: .\PlotModel.py
+      hash: md5
+      md5: 6306605fe56e393f2bb0fcab82660a8d
+      size: 1471
+    - path: .\trained_model.pkl
+      hash: md5
+      md5: 183472708bfd0ecc30b1161d9151f7bd
+      size: 480558
+    outs:
+    - path: .\plot.png
+      hash: md5
+      md5: edaaa91c697c5be10226e56abfa22968
+      size: 23683

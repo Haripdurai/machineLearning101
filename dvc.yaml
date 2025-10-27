@@ -1,0 +1,15 @@
+stages:
+  train:
+    cmd: python .\TrainModel.py
+    deps:
+    - .\Retail_sales.csv
+    - .\TrainModel.py
+    outs:
+    - .\trained_model.pkl
+  plot:
+    cmd: python .\PlotModel.py
+    deps:
+    - .\PlotModel.py
+    - .\trained_model.pkl
+    outs:
+    - .\plot.png
