@@ -1,0 +1,71 @@
+Basic EDA Report
+================
+
+Shape: (30000, 11)
+
+Columns and dtypes:
+Store ID                  object
+Product ID                 int64
+Date                      object
+Units Sold                 int64
+Sales Revenue (USD)      float64
+Discount Percentage        int64
+Marketing Spend (USD)      int64
+Store Location            object
+Product Category          object
+Day of the Week           object
+Holiday Effect              bool
+
+Memory usage (MB): 9.53
+
+Top 5 rows:
+  Store ID  Product ID       Date  Units Sold  Sales Revenue (USD)  Discount Percentage  Marketing Spend (USD)            Store Location Product Category Day of the Week  Holiday Effect
+Spearsland    52372247 2022-01-01           9              2741.69                   20                     81                  Tanzania        Furniture        Saturday           False
+Spearsland    52372247 2022-01-02           7              2665.53                    0                      0                Mauritania        Furniture          Sunday           False
+Spearsland    52372247 2022-01-03           1               380.79                    0                      0 Saint Pierre and Miquelon        Furniture          Monday           False
+Spearsland    52372247 2022-01-04           4              1523.16                    0                      0                 Australia        Furniture         Tuesday           False
+Spearsland    52372247 2022-01-05           2               761.58                    0                      0                 Swaziland        Furniture       Wednesday           False
+
+Missing values (count):
+Store ID                 0
+Product ID               0
+Date                     0
+Units Sold               0
+Sales Revenue (USD)      0
+Discount Percentage      0
+Marketing Spend (USD)    0
+Store Location           0
+Product Category         0
+Day of the Week          0
+Holiday Effect           0
+
+Missing values (percent):
+Store ID                 0.0
+Product ID               0.0
+Date                     0.0
+Units Sold               0.0
+Sales Revenue (USD)      0.0
+Discount Percentage      0.0
+Marketing Spend (USD)    0.0
+Store Location           0.0
+Product Category         0.0
+Day of the Week          0.0
+Holiday Effect           0.0
+
+Descriptive statistics (numeric):
+         Product ID    Units Sold  Sales Revenue (USD)  Discount Percentage  Marketing Spend (USD)
+count  3.000000e+04  30000.000000         30000.000000         30000.000000           30000.000000
+mean   4.461294e+07      6.161967          2749.509593             2.973833              49.944033
+std    2.779759e+07      3.323929          2568.639288             5.974530              64.401655
+min    3.636541e+06      0.000000             0.000000             0.000000               0.000000
+25%    2.228600e+07      4.000000           882.592500             0.000000               0.000000
+50%    4.002449e+07      6.000000          1902.420000             0.000000               1.000000
+75%    6.559352e+07      8.000000          3863.920000             0.000000             100.000000
+max    9.628253e+07     56.000000         27165.880000            20.000000             199.000000
+
+Descriptive statistics (object):
+          Store ID        Date Store Location Product Category Day of the Week
+count        30000       30000          30000            30000           30000
+unique           1         731            243                4               7
+top     Spearsland  2022-01-01          Korea        Furniture        Saturday
+freq         30000          42            237             9503            4310

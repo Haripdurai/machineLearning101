@@ -1,0 +1,52 @@
+Column: Store ID
+Store ID
+Spearsland    30000
+
+Column: Date
+Date
+2022-01-01    42
+2022-01-02    42
+2022-01-03    42
+2022-01-04    42
+2022-01-05    42
+2022-01-06    42
+2022-01-07    42
+2022-01-08    42
+2022-01-09    42
+2022-01-10    42
+
+Column: Store Location
+Store Location
+Korea                       237
+Congo                       234
+Turks and Caicos Islands    156
+Guam                        153
+Tanzania                    151
+Jamaica                     148
+Kenya                       146
+Tonga                       146
+Ecuador                     144
+Israel                      144
+
+Column: Product Category
+Product Category
+Furniture      9503
+Electronics    8041
+Clothing       6608
+Groceries      5848
+
+Column: Day of the Week
+Day of the Week
+Saturday     4310
+Sunday       4309
+Monday       4309
+Tuesday      4268
+Wednesday    4268
+Thursday     4268
+Friday       4268
+
+Column: Holiday Effect
+Holiday Effect
+False    29836
+True       164
+
